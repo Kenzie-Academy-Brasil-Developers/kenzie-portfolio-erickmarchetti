@@ -1,15 +1,15 @@
 // Styles
-import { Container } from "@/styles/Global";
-import { Text } from "@/styles/Text";
-import { Button } from "@/styles/Buttons";
+import { Container } from "@/styles/Global"
+import { Text } from "@/styles/Text"
+import { Button } from "@/styles/Buttons"
 
 // Components
-import { Stack } from "@/components/Stack";
-import { Project } from "@/components/Project";
+import { Stack } from "@/components/Stack"
+import { Project } from "@/components/Project"
 
 // Data
-import { stackData } from "@/utils/stackData";
-import { userData } from "@/utils/userData";
+import { stackData } from "@/utils/stackData"
+import { userData } from "@/utils/userData"
 
 // Page Style
 import {
@@ -21,9 +21,8 @@ import {
   ProjectsArea,
   ProjectsAreaSocialMediaMessage,
   ProjectsAreaContent,
-  ProjectAreaWrapperColumns,
-} from "./style";
-
+  ProjectAreaWrapperColumns
+} from "./style"
 
 export const Home = (): JSX.Element => {
   return (
@@ -38,6 +37,16 @@ export const Home = (): JSX.Element => {
               Sou estudante de programação na Kenzie Academy Brasil, participei
               de diversos projetos resolvendo problemas de alto nível e
               desenvolvendo habilidades
+            </Text>
+            <Text as="h2" type="heading2" color="grey4">
+              Sobre mim
+            </Text>
+            <Text type="body1" color="grey4">
+              Desenvolvedor Front End com experiência em tecnologias como Html,
+              Css, JavaScript e React. Já trabalhei como Peer Coach dando
+              suporte técnico para novas turmas em uma das maiores empresas de
+              tecnologia bootcamp no Brasil. Tenho como paixão resolver
+              problemas e absorver cada vez mais conhecimento.
             </Text>
             <HeaderButtonsArea>
               <Button as="a" href="#projetos">
@@ -100,5 +109,5 @@ export const Home = (): JSX.Element => {
         </Container>
       </ProjectsArea>
     </main>
-  );
-};
+  )
+}
