@@ -1,64 +1,64 @@
-import { createTheme, globalCss, styled } from "@stitches/react";
-import { ReactNode } from "react";
+import { createTheme, globalCss, styled } from "@stitches/react"
+import { ReactNode } from "react"
 
 interface GlobalStyleProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const Container = styled("div", {
   maxWidth: "$container",
   margin: "0 auto",
-  padding: "0 1rem",
-});
+  padding: "0 1rem"
+})
 
 export const Flex = styled("div", {
   display: "flex",
-  gap: "$1",
-});
+  gap: "$1"
+})
 
 export const colors = {
   color: {
     brand1: {
-      color: "$brand1",
+      color: "$brand1"
     },
 
     grey1: {
-      color: "$grey1",
+      color: "$grey1"
     },
 
     grey2: {
-      color: "$grey2",
+      color: "$grey2"
     },
 
     grey3: {
-      color: "$grey3",
+      color: "$grey3"
     },
 
     grey4: {
-      color: "$grey4",
+      color: "$grey4"
     },
 
     grey5: {
-      color: "$grey5",
+      color: "$grey5"
     },
     grey6: {
-      color: "$grey6",
-    },
-  },
-};
+      color: "$grey6"
+    }
+  }
+}
 
 export const globalStyles = globalCss({
   "*": {
     margin: 0,
     padding: 0,
     fontFamily: "'Inter', sans-serif",
-    boxSizing: "border-box",
+    boxSizing: "border-box"
   },
   html: {
-    scrollBehavior: "smooth",
+    scrollBehavior: "smooth"
   },
-  a: { textDecoration: "none" },
-});
+  a: { textDecoration: "none" }
+})
 
 export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
   const theme = createTheme({
@@ -74,19 +74,19 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       grey5: "#F8F9FA",
       grey6: "#DEE0FB",
       whiteFixed: "#ffffff",
-      mode: "#ffffff",
+      mode: "#ffffff"
     },
     sizes: {
-      container: "75rem",
+      container: "75rem"
     },
     space: {
       1: "0.5rem",
       2: "1rem",
-      3: "2rem",
+      3: "2rem"
     },
     fonts: {
       titles: '"Lexend", sans-serif;',
-      texts: '"Inter", sans-serif',
+      texts: '"Inter", sans-serif'
     },
     fontSizes: {
       title1: "2.75rem",
@@ -98,7 +98,7 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
 
       // Mobile
       title1Mobile: "$title2",
-      title2Mobile: "$title3",
+      title2Mobile: "$title3"
     },
     lineHeights: {
       title1: "3.8rem",
@@ -110,20 +110,20 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
 
       // Mobile
       title1Mobile: "$title2",
-      title2Mobile: "$title3",
+      title2Mobile: "$title3"
     },
 
     radii: {
       1: "0.5rem",
-      2: "0.25rem",
-    },
-  });
+      2: "0.25rem"
+    }
+  })
 
-  globalStyles();
+  globalStyles()
 
   const App = styled("div", {
-    minHeight: "100vh",
-  });
+    minHeight: "100vh"
+  })
 
-  return <App className={theme}>{children}</App>;
-};
+  return <App className={theme}>{children}</App>
+}
