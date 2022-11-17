@@ -42,46 +42,49 @@ export const Project = (): JSX.Element => {
     fetchData()
   }, [])
 
+  const exludeRepos: string[] = ["Technologies-common-commands"]
+
   return (
     <>
       {repositories?.map((repository) => {
-        console.log(repository)
         return (
-          <ProjectWrapper key={repository.id}>
-            <Text
-              as="h2"
-              type="heading3"
-              css={{ marginBottom: "$3" }}
-              color="grey1"
-            >
-              {repository.name}
-            </Text>
+          !exludeRepos.includes(repository.name) && (
+            <ProjectWrapper key={repository.id}>
+              <Text
+                as="h2"
+                type="heading3"
+                css={{ marginBottom: "$3" }}
+                color="grey1"
+              >
+                {repository.name}
+              </Text>
 
-            {repository.language && (
-              <ProjectStack>
-                <Text type="body2">Linguagem:</Text>
-                <ProjectStackTech>
-                  <Text color="brand1" type="body2">
-                    {repository.language}
-                  </Text>
-                </ProjectStackTech>
-              </ProjectStack>
-            )}
-
-            <Text type="body1" color="grey2">
-              {repository.description}
-            </Text>
-            <ProjectLinks>
-              <ProjectLink target="_blank" href={repository.html_url}>
-                <FaGithub /> Github Code
-              </ProjectLink>
-              {repository.homepage && (
-                <ProjectLink target="_blank" href={repository.homepage}>
-                  <FaShare /> Aplicação
-                </ProjectLink>
+              {repository.language && (
+                <ProjectStack>
+                  <Text type="body2">Linguagem:</Text>
+                  <ProjectStackTech>
+                    <Text color="brand1" type="body2">
+                      {repository.language}
+                    </Text>
+                  </ProjectStackTech>
+                </ProjectStack>
               )}
-            </ProjectLinks>
-          </ProjectWrapper>
+
+              <Text type="body1" color="grey2">
+                {repository.description}
+              </Text>
+              <ProjectLinks>
+                <ProjectLink target="_blank" href={repository.html_url}>
+                  <FaGithub /> Github Code
+                </ProjectLink>
+                {repository.homepage && (
+                  <ProjectLink target="_blank" href={repository.homepage}>
+                    <FaShare /> Aplicação
+                  </ProjectLink>
+                )}
+              </ProjectLinks>
+            </ProjectWrapper>
+          )
         )
       })}
     </>

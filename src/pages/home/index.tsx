@@ -42,11 +42,15 @@ export const Home = (): JSX.Element => {
               Sobre mim
             </Text>
             <Text type="body1" color="grey4">
-              Desenvolvedor Front End com experiência em tecnologias como Html,
-              Css, JavaScript e React. Já trabalhei como Peer Coach dando
-              suporte técnico para novas turmas em uma das maiores empresas de
-              tecnologia bootcamp no Brasil. Tenho como paixão resolver
-              problemas e absorver cada vez mais conhecimento.
+              Desenvolvedor Web Front End, apaixonado por tecnologia desde
+              criança e foi por isso que me encontrei na área de desenvolvimento
+              web. Tive a oportunidade de estudar na Kenzie Academy Brasil onde
+              evoluí muito como desenvolvedor, tanto em conhecimento técnico,
+              como também soft skills necessárias para o mercado de trabalho.
+              Tenho competência em: React | HTML | CSS | Scrum | Kanban | Git |
+              Javascript | Responsive Web Design | Styled-components |
+              Desenvolvimento Web Front End | Redux.js | Redux Thunk |
+              ContextApi | Typescript | PostgreSQL | Express.js | TypeORM
             </Text>
             <HeaderButtonsArea>
               <Button as="a" href="#projetos">
